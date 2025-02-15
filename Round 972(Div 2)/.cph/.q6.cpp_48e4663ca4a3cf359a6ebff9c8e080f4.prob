@@ -1,0 +1,1 @@
+{"name":"Local: q6","url":"/home/piyush/DCIM/code/contest/Round 972(Div 2)/q6.cpp","tests":[{"id":1726331115117,"input":"3\n2 2 3\n1 2\n1 3 5\n4 5 2\n2 2 4\n1 2\n1 1 3 2\n4 2 5 1\n2 4 2\n1 2\n3 4\n5 5\n5 5\n5 5\n","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/home/piyush/DCIM/code/contest/Round 972(Div 2)/q6.cpp","group":"local","local":true}
