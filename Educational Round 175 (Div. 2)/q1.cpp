@@ -32,3 +32,22 @@ template <class T, class... S> void dbs(string str, T t, S... s) {int idx = str.
 template <class T> void prc(T a, T b) {cerr << "["; for (T i = a; i != b; ++i) {if (i != a) cerr << ", "; cerr << *i;} cerr << "]\n";}
 ll binpow(ll b,ll p,ll mod){ll ans=1;b%=mod;for(;p;p>>=1){if(p&1)ans=ans*b%mod;b=b*b%mod;}return ans;}
 //----------------- //
+
+
+
+void processTestCase() {
+    long long num;
+    cin >> num;
+    long long div = (num + 1) / 15;
+    int mod = (num + 1) % 15;
+    cout << (div * 3) + min(mod, 3) << "\n";
+}
+
+int main() {
+    int t;
+    cin >> t;
+    for (int i = 0; i < t; i++) {
+        processTestCase();
+    }
+    return 0;
+}

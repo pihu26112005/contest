@@ -11,6 +11,7 @@
 #include <climits>
 #include <queue>
 #include <stack>
+#include <numeric>
 using namespace std;
 #define ll long long
 #define pb push_back
@@ -32,3 +33,55 @@ template <class T, class... S> void dbs(string str, T t, S... s) {int idx = str.
 template <class T> void prc(T a, T b) {cerr << "["; for (T i = a; i != b; ++i) {if (i != a) cerr << ", "; cerr << *i;} cerr << "]\n";}
 ll binpow(ll b,ll p,ll mod){ll ans=1;b%=mod;for(;p;p>>=1){if(p&1)ans=ans*b%mod;b=b*b%mod;}return ans;}
 //----------------- //
+
+
+void processTestCase() {
+    int n, k;
+    cin >> n >> k;
+    string s;
+    cin >> s;
+    vector<int> a(n);
+    for (int &x : a) cin >> x;
+
+      if (k == 0) {
+            int mxp = 0;
+            for (int i = 0; i < n; ++i) {
+                if (s[i] == 'B' && a[i] > mxp)  mxp = a[i];
+            }
+            cout << mxp << '\n';
+        return;
+        }
+
+    int l = 0, h = *max_element(a.begin(), a.end()), ans = h;
+
+    while (l <= h) {
+        int mid = (l + h) / 2, cnt = 0;
+        bool all = false, req = false;
+
+        for (int i = 0; i < n; ++i) {
+            if (s[i] == 'R' && a[i] > mid) {
+                if (all && req) cnt++;
+                all = req = false;
+            } else {
+                all = true;
+                if (s[i] == 'B' && a[i] > mid) req = true;
+            }
+        }
+        if (all && req) cnt++;
+
+        (cnt <= k ? ans = mid, h = mid - 1 : l = mid + 1);
+    }
+
+    cout << ans << '\n';
+}
+
+int main() {
+    ios_base::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    int t;
+    cin >> t;
+    while (t--) processTestCase();
+    
+    return 0;
+}
