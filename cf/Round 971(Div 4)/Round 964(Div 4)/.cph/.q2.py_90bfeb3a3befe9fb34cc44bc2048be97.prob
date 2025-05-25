@@ -1,0 +1,1 @@
+{"name":"Local: q2","url":"/home/piyush/DCIM/code/contest/Round 964(Div 4)/q2.py","tests":[{"id":1722960462482,"input":"5\n3 8 2 6\n1 1 1 1\n10 10 2 2\n1 1 10 10\n3 8 7 2\n","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/home/piyush/DCIM/code/contest/Round 964(Div 4)/q2.py","group":"local","local":true}
