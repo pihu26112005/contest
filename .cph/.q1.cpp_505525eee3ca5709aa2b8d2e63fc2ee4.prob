@@ -1,1 +1,0 @@
-{"name":"Local: q1","url":"/home/piyush/DCIM/code/contest/q1.cpp","tests":[{"id":1740841445923,"input":"9 4\n8 8 1 2 2 4 16 16 16\n8\n30\n28\n1300\n31\n15\n16\n29\n35\n","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/home/piyush/DCIM/code/contest/q1.cpp","group":"local","local":true}
